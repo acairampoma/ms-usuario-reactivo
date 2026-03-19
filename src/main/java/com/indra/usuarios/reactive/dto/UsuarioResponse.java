@@ -1,6 +1,7 @@
 package com.indra.usuarios.reactive.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.indra.usuarios.reactive.entity.Usuario;
 import io.swagger.v3.oas.annotations.media.Schema;
 
@@ -8,6 +9,7 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Schema(description = "Respuesta de registro exitoso")
+@JsonPropertyOrder({"id", "created", "modified", "last_login", "token", "isactive"})
 public record UsuarioResponse(
 
         UUID id,
